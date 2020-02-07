@@ -4,9 +4,12 @@
     React hooks + TypeScript + jsonp
 
 ## 技术点
-    - jsonp解决跨域请求
-    - 发送请求使用云函数
-    - Bizcharts数据可视化
+   - jsonp解决跨域请求
+   - 发送请求使用云函数
+   - Bizcharts数据可视化
+
+## 项目进度
+   - [x] 导航组件
 
 ## 项目运行
 ```
