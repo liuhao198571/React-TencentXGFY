@@ -24,7 +24,7 @@ html,body,#root,.App{
 
 .nav{
     background-color: #005dff;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -33,8 +33,36 @@ html,body,#root,.App{
     flex-direction: row;
     span{
         flex:1;
-        color: white;
-        font-size: 0.36rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a{
+            text-decoration: none;
+            font-size: 0.28rem;
+            color: rgba(255, 255, 255, 0.6);
+            font-weight: normal;
+        }
+    }
+    span.active{
+        position: relative;
+        a{
+            color: white;
+            font-weight: bold;
+        }
+        &::before{
+            content: '.';
+            display: block;
+            font-size: 0;
+            line-height: 0;
+            width: 0.36rem;
+            height: 0.08rem;
+            border-radius: 0.16rem;
+            background-color: #fff;
+            bottom: 0.08rem;
+            left: 50%;
+            transform: translate(-50%, 0);
+            position: absolute;
+        }
     }
 }
 
@@ -43,5 +71,13 @@ html,body,#root,.App{
 }
 
 #news{
-    height: 500px;
+    height: 1000px;
+}
+
+#rumor{
+    height: 1000px;
+}
+
+#prevent{
+    height: 1000px;
 }

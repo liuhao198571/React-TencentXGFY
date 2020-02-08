@@ -5,6 +5,7 @@ import { getDisease } from '../services/index';
 
 // 引入模块
 import Nav from '../components/Nav';
+import Head from '../components/Head';
 
 
 const App = () => {
@@ -20,10 +21,16 @@ const App = () => {
             {/* 顶部导航栏 */}
             <Nav />
             <div id="charts">
-                1
+            <Head />
             </div>
             <div id="news">
-                2
+                2最新进展
+            </div>
+            <div id="rumor">
+                3辟谣信息
+            </div>
+            <div id="prevent">
+                4医疗预防
             </div>
         </div>
     )
