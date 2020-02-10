@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
-  cursor: pointer;
 }
 
 html, body, #root, .App {
@@ -12,7 +11,9 @@ html, body, #root, .App {
 
 .App {
   max-width: 705px;
+  width: 100%;
   margin: 0 auto;
+  font-weight: 300;
   background-color: #fff;
   width: 100%;
   position: relative;
