@@ -8,12 +8,15 @@ import Nav from '../components/Nav/Nav';
 import Head from '../components/Head/Head';
 import TopDataWrap from '../components/TopDataWrap/TopDataWrap';
 import Map from '../components/Map/Map';
+import Chart from '../components/Chart/Chart';
 
 
 const App = () => {
 
     let [total, setTotal] = useState<TotalType>({}); //数据更新时间
     let [countrydata, setCountryData] = useState([]); // 全国疫情分布
+    let [daylist, setDayList] = useState([]); // 每日数据
+    let [dayaddlist, setDayAddList] = useState([]); // 每日新增数据
 
 
     useEffect(()=>{
@@ -31,6 +34,8 @@ const App = () => {
                 }
             })
             setCountryData(countryData);
+            setDayList(res.chinaDayList)
+            setDayAddList(res.chinaDayAddList);
         })
     },[])
 
@@ -44,8 +49,10 @@ const App = () => {
                 {/* 导航栏 */}
                 <Nav />
                 <div className="places">
-                    {/* 中国地图 */}
+                    {/* 中国疫情分布地图 */}
                     <Map countrydata={countrydata} />
+                    {/* 疫情图表 */}
+                    <Chart chinadayaddlist={dayaddlist} chinadaylist={daylist} />
                 </div>
             </div>
             <div id="news">
